@@ -7,13 +7,13 @@ export const buttonStyles = cva(
   {
     variants: {
       variant: {
-        primary: 'bg-accent text-accent-foreground hover:bg-[#cdfa7a]',
+        primary: 'bg-accent text-accent-foreground hover:bg-accent-hover',
         secondary:
           'border border-border-strong bg-transparent text-foreground hover:border-foreground hover:bg-white/5',
         ghost: 'text-foreground underline-offset-4 hover:text-accent hover:underline',
       },
       size: {
-        sm: 'h-10 px-4 text-xs',
+        sm: 'h-11 px-4 text-xs',
         md: 'h-12 px-6 text-xs',
         lg: 'h-14 px-8 text-sm',
       },

@@ -4,7 +4,7 @@ import { faqItems } from '@/data/faq'
 export function FaqSection() {
   return (
     <section id="faq" aria-labelledby="faq-title" className="border-t border-border">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 md:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:py-24 lg:py-32 lg:grid-cols-[1fr_1.6fr] lg:gap-20">
         <div>
           <p className="mb-5 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
             <span className="text-accent">07</span>

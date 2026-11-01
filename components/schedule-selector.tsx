@@ -68,7 +68,7 @@ export function ScheduleSelector({ value, onChange, counts, panelId }: ScheduleS
           >
             <span className="text-xs font-semibold uppercase tracking-[0.12em] sm:text-sm">
               <span className="sm:hidden" aria-hidden="true">
-                {day.short.charAt(0)}
+                {day.short.slice(0, 2)}
               </span>
               <span className="hidden sm:inline" aria-hidden="true">
                 {day.short}
@@ -76,7 +76,7 @@ export function ScheduleSelector({ value, onChange, counts, panelId }: ScheduleS
               <span className="sr-only">{day.label}</span>
             </span>
             <span
-              className={cn('text-[11px] tabular-nums', isActive ? 'text-accent-foreground/75' : 'text-muted-foreground')}
+              className={cn('text-xs tabular-nums', isActive ? 'text-accent-foreground/75' : 'text-muted-foreground')}
             >
               {counts[day.value]}
               <span className="sr-only"> classes</span>

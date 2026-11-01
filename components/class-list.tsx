@@ -56,9 +56,9 @@ export function ClassList({ classes, dayLabel }: { classes: ScheduledClass[]; da
               {session.intensity}
             </p>
             <a
-              href="#trial"
+              href="#trial-form"
               onClick={() => setProgram(session.programId)}
-              className="col-start-2 w-fit rounded-sm border border-border-strong px-3 py-2 text-xs font-semibold uppercase tracking-[0.1em] text-foreground transition-colors hover:border-accent hover:text-accent sm:col-start-auto"
+              className="col-start-2 inline-flex min-h-12 w-fit items-center rounded-sm border border-border-strong px-4 text-xs font-semibold uppercase tracking-[0.1em] text-foreground transition-colors hover:border-accent hover:text-accent sm:col-start-auto"
             >
               Request trial
               <span className="sr-only">

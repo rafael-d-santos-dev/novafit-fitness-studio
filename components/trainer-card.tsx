@@ -29,7 +29,7 @@ export function TrainerCard({ trainer }: { trainer: Trainer }) {
           </li>
         ))}
       </ul>
-      <p className="mt-4 text-pretty text-sm leading-relaxed text-muted-foreground">{trainer.intro}</p>
+      <p className="mt-4 text-pretty text-base leading-relaxed sm:text-sm text-muted-foreground">{trainer.intro}</p>
     </article>
   )
 }

@@ -10,7 +10,7 @@ export const programs: Program[] = [
     focus: ['Squat, hinge, press, pull', 'Progressive loading', 'Technique first'],
     sampleDurationMinutes: 60,
     level: 'All levels',
-    image: '/images/program-strength.png',
+    image: '/images/program-strength.webp',
     imageAlt: 'A man holding a barbell across his back at the bottom of a squat.',
   },
   {
@@ -22,7 +22,7 @@ export const programs: Program[] = [
     focus: ['Kettlebells and carries', 'Mobility', 'Core stability'],
     sampleDurationMinutes: 50,
     level: 'Beginner friendly',
-    image: '/images/program-functional.png',
+    image: '/images/program-functional.webp',
     imageAlt: 'A woman swinging a kettlebell to chest height.',
   },
   {
@@ -34,7 +34,7 @@ export const programs: Program[] = [
     focus: ['Timed intervals', 'Engine building', 'Scalable effort'],
     sampleDurationMinutes: 40,
     level: 'Intermediate',
-    image: '/images/program-hiit.png',
+    image: '/images/program-hiit.webp',
     imageAlt: 'An athlete sprinting on an air bike in a dimly lit studio.',
   },
   {
@@ -46,7 +46,7 @@ export const programs: Program[] = [
     focus: ['Individual plan', 'Form coaching', 'Flexible scheduling'],
     sampleDurationMinutes: 55,
     level: 'Tailored',
-    image: '/images/program-personal.png',
+    image: '/images/program-personal.webp',
     imageAlt: 'A coach guiding a client through a dumbbell row with a hand on their back.',
   },
 ]

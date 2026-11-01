@@ -18,10 +18,10 @@ const principles = [
 export function StudioIntro() {
   return (
     <section aria-labelledby="studio-title" className="border-t border-border">
-      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-24 sm:px-8 md:py-32 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
+      <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 sm:px-8 md:py-24 lg:py-32 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div className="relative aspect-[4/5] overflow-hidden bg-surface lg:aspect-auto">
           <Image
-            src="/images/studio.png"
+            src="/images/studio.webp"
             alt="The NovaFit training floor: a row of squat racks and neatly stacked barbells under warm lighting."
             fill
             sizes="(min-width: 1024px) 45vw, 100vw"

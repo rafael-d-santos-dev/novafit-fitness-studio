@@ -19,7 +19,7 @@ export function MembershipCard({ plan }: { plan: Membership }) {
       )}
     >
       {plan.recommended && (
-        <p className="absolute -top-3 left-8 bg-accent px-2.5 py-1 text-[11px] font-bold uppercase tracking-[0.14em] text-accent-foreground">
+        <p className="absolute -top-3 left-8 bg-accent px-2.5 py-1 text-xs font-bold uppercase tracking-[0.14em] text-accent-foreground">
           Recommended
         </p>
       )}
@@ -41,7 +41,7 @@ export function MembershipCard({ plan }: { plan: Membership }) {
 
       <ul className="mt-8 flex flex-col gap-4" aria-label={`${plan.name} includes`}>
         {plan.features.map((feature) => (
-          <li key={feature} className="flex gap-3 text-sm leading-relaxed">
+          <li key={feature} className="flex gap-3 text-base leading-relaxed sm:text-sm">
             <Check aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent" />
             {feature}
           </li>
@@ -49,7 +49,7 @@ export function MembershipCard({ plan }: { plan: Membership }) {
       </ul>
 
       <ButtonLink
-        href="#trial"
+        href="#trial-form"
         onClick={() => setPlan(plan.id)}
         variant={plan.recommended ? 'primary' : 'secondary'}
         className="mt-10 w-full"

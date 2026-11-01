@@ -60,7 +60,7 @@ function validate(fields: LocalFields, program: string): Errors {
 }
 
 const inputClass =
-  'block w-full rounded-sm border bg-background px-4 py-3 text-base text-foreground placeholder:text-muted-foreground/70 transition-colors focus-visible:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40'
+  'block w-full rounded-sm border bg-background px-4 py-3 text-base text-foreground transition-colors focus-visible:border-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/40'
 
 function Field({
   id,
@@ -307,7 +307,7 @@ export function TrialRequestForm() {
                   value={method}
                   checked={fields.contactMethod === method}
                   onChange={() => update('contactMethod', method)}
-                  className="size-4 accent-[#b7f34a] focus-visible:outline-none"
+                  className="size-4 accent-accent focus-visible:outline-none"
                 />
                 {method}
               </label>
@@ -368,7 +368,7 @@ export function TrialRequestForm() {
               aria-invalid={Boolean(errors.acknowledge)}
               aria-describedby={errors.acknowledge ? 'trial-acknowledge-error' : undefined}
               aria-required="true"
-              className="mt-1 size-4 shrink-0 accent-[#b7f34a]"
+              className="mt-1 size-4 shrink-0 accent-accent"
             />
             <span>
               I understand this is a portfolio demo. My details will not be sent or stored, and no session will be booked.

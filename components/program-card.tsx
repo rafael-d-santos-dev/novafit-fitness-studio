@@ -1,6 +1,7 @@
 'use client'
 
 import { ArrowUpRight, Clock } from 'lucide-react'
+import { ButtonLink } from '@/components/button'
 import { SafeImage } from '@/components/safe-image'
 import { useTrialSelection } from '@/components/trial-selection-context'
 import type { Program } from '@/types'
@@ -24,7 +25,7 @@ export function ProgramCard({ program }: { program: Program }) {
           sizes="(min-width: 768px) 50vw, 100vw"
           className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
         />
-        <span className="absolute left-4 top-4 rounded-sm bg-background/85 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-foreground">
+        <span className="absolute left-4 top-4 rounded-sm bg-background/85 px-2.5 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-foreground">
           {categoryLabel[program.category]}
         </span>
       </div>
@@ -56,15 +57,11 @@ export function ProgramCard({ program }: { program: Program }) {
               </span>
             </span>
           </p>
-          <a
-            href="#trial"
-            onClick={() => setProgram(program.id)}
-            className="inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold uppercase tracking-[0.08em] text-foreground transition-colors hover:text-accent"
-          >
+          <ButtonLink href="#trial-form" size="sm" variant="secondary" onClick={() => setProgram(program.id)}>
             Try this program
             <span className="sr-only">: {program.name}</span>
             <ArrowUpRight aria-hidden="true" className="size-4" />
-          </a>
+          </ButtonLink>
         </div>
         </div>
       </div>

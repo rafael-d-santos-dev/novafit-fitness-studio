@@ -14,7 +14,7 @@ export function ProgramsSection() {
 
   return (
     <section id="programs" aria-labelledby="programs-title" className="border-t border-border">
-      <div className="mx-auto max-w-7xl px-5 py-24 sm:px-8 md:py-32">
+      <div className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-24 lg:py-32">
         <SectionHeading
           id="programs-title"
           index="02"

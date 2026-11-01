@@ -105,13 +105,13 @@ export function Navbar({ onHomePage = true }: { onHomePage?: boolean }) {
         </ul>
 
         <div className="flex items-center gap-3">
-          <ButtonLink href={hrefFor('trial')} size="sm" className="hidden sm:inline-flex">
+          <ButtonLink href={hrefFor('trial')} size="sm" className="px-3 sm:px-4">
             Book a Trial
           </ButtonLink>
           <button
             ref={toggleRef}
             type="button"
-            className="inline-flex size-11 items-center justify-center rounded-sm border border-border-strong text-foreground lg:hidden"
+            className="inline-flex size-12 items-center justify-center rounded-sm border border-border-strong text-foreground lg:hidden"
             aria-expanded={open}
             aria-controls={menuId}
             onClick={() => setOpen((value) => !value)}

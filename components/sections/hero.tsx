@@ -12,7 +12,7 @@ export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="relative isolate overflow-hidden">
       <Image
-        src="/images/hero.png"
+        src="/images/hero.webp"
         alt=""
         fill
         priority
@@ -21,12 +21,12 @@ export function Hero() {
       />
       <div
         aria-hidden="true"
-        className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/10 md:via-background/70"
+        className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/60 sm:to-background/10 md:via-background/70"
       />
       <div aria-hidden="true" className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background to-transparent" />
 
       <div className="mx-auto flex min-h-[calc(100svh-4rem)] max-w-7xl flex-col justify-end px-5 pb-10 pt-24 sm:px-8 md:pb-14">
-        <p className="mb-6 inline-flex w-fit items-center gap-2 rounded-sm border border-border-strong bg-background/60 px-3 py-1.5 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-foreground">
+        <p className="mb-6 inline-flex w-fit items-center gap-2 rounded-sm border border-border-strong bg-background/60 px-3 py-1.5 text-xs font-medium uppercase tracking-[0.16em] text-muted-foreground">
           <span aria-hidden="true" className="size-1.5 rounded-full bg-accent" />
           Portfolio demo · Fictional studio
         </p>
@@ -54,10 +54,10 @@ export function Hero() {
           </ButtonLink>
         </div>
 
-        <dl className="mt-16 grid gap-6 border-t border-border-strong pt-6 sm:grid-cols-3">
+        <dl className="mt-10 grid gap-4 border-t border-border-strong pt-5 sm:mt-16 sm:grid-cols-3 sm:gap-6 sm:pt-6">
           {highlights.map((item) => (
             <div key={item.label}>
-              <dt className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">{item.label}</dt>
+              <dt className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{item.label}</dt>
               <dd className="mt-2 text-sm text-foreground/90">{item.value}</dd>
             </div>
           ))}

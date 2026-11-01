@@ -9,7 +9,7 @@ export const trainers: Trainer[] = [
     specialties: ['Barbell technique', 'Beginner strength'],
     intro:
       'Maya keeps sessions calm and precise. She likes breaking a lift into small cues so new members feel confident under the bar.',
-    image: '/images/trainer-maya.png',
+    image: '/images/trainer-maya.webp',
     imageAlt: 'Portrait of Maya, a woman with short dark hair wearing a black training top.',
   },
   {
@@ -19,7 +19,7 @@ export const trainers: Trainer[] = [
     specialties: ['Interval design', 'Rowing and bike work'],
     intro:
       'Dario plans conditioning blocks that are hard but measurable. Expect clear targets and honest pacing advice.',
-    image: '/images/trainer-dario.png',
+    image: '/images/trainer-dario.webp',
     imageAlt: 'Portrait of Dario, a bearded man in a grey t-shirt with arms crossed.',
   },
   {
@@ -29,7 +29,7 @@ export const trainers: Trainer[] = [
     specialties: ['Kettlebells', 'Mobility'],
     intro:
       'Inês focuses on how you move day to day. Her classes mix loaded carries, kettlebell flows, and mobility work.',
-    image: '/images/trainer-ines.png',
+    image: '/images/trainer-ines.webp',
     imageAlt: 'Portrait of Inês, a smiling woman with curly hair tied back.',
   },
   {
@@ -39,7 +39,7 @@ export const trainers: Trainer[] = [
     specialties: ['One-to-one programming', 'Returning to training'],
     intro:
       'Kenji works with members one-to-one, building plans that fit around busy schedules and previous training experience.',
-    image: '/images/trainer-kenji.png',
+    image: '/images/trainer-kenji.webp',
     imageAlt: 'Portrait of Kenji, a man with short black hair in a long-sleeve training shirt.',
   },
 ]
