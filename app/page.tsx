@@ -1,3 +1,4 @@
+import { AssistantWidget } from '@/components/assistant-widget'
 import { Footer } from '@/components/footer'
 import { Navbar } from '@/components/navbar'
 import { FaqSection } from '@/components/sections/faq-section'
@@ -27,6 +28,7 @@ export default function HomePage() {
         <FinalCta />
       </main>
       <Footer />
+      <AssistantWidget />
     </TrialSelectionProvider>
   )
 }
