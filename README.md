@@ -1,113 +1,308 @@
-# NovaFit Fitness Studio
+# NovaFit — Fitness Studio
 
-A responsive, accessibility-focused marketing website for **NovaFit Fitness Studio**, a fictional premium fitness studio. I built it as a frontend portfolio piece.
+A responsive, accessibility-focused fitness studio website built as a frontend portfolio project.
 
-> **Demo content disclaimer:** NovaFit doesn't exist. The trainers, class schedule, prices, policies, and FAQ answers are all invented for demonstration. The trial request form doesn't send or store anything, and nothing on this site is a real offer, booking, or legal commitment.
+NovaFit combines a cinematic visual identity, interactive training experiences, membership selection, trial request flow, and a concept conversational assistant in a single-page experience.
+
+**Live Demo:** https://novafit-fitness-studio.vercel.app
+
+**Repository:** https://github.com/rafael-d-santos-dev/novafit-fitness-studio
+
+> **Portfolio Demonstration:** NovaFit is a fictional fitness studio. Trainers, programs, schedules, prices, policies, and testimonials or business details are illustrative. The website does not represent a real business, and its forms do not send or store submissions. No real booking, payment, or commercial transaction takes place.
+
+---
 
 ## Overview
 
-The site is a single conversion-focused landing page with two lightweight legal routes. It uses a dark editorial look: near-black surfaces, charcoal panels, an electric lime accent (`#B7F34A`), and large photography. It also shows a few frontend skills in practice: typed mock data, reusable components, real client-side interactions, and careful accessibility work.
+NovaFit is a conversion-focused fitness studio website designed around a premium **Cinematic Tech** visual direction.
 
-## Features
+The experience uses an Obsidian and Graphite foundation, Electric Lime accents, Ice White typography, editorial compositions, and athletic photography to communicate performance, technology, and modern training.
 
-- **Responsive navigation:** sticky header, an accessible mobile menu (`aria-expanded`, Escape to close, focus management), and a highlight on the section you're viewing
-- **Program filters:** category filters built with React state that update the program grid and announce the result count
-- **Weekly schedule:** a keyboard-operable day selector (arrow keys, Home and End) with a class list per day and an empty state
-- **Membership plans:** three sample tiers. Each CTA scrolls to the trial form with the matching program pre-selected. There's no checkout.
-- **Trial request form:** labels, inline validation, an error summary that's announced to screen readers, a guard against double submission, and a demo success state. No network request is made.
-- **FAQ accordion:** native buttons with `aria-expanded` and `aria-controls`
-- **Legal pages:** `/privacy` and `/terms`, written to describe how this demo actually behaves
-- **Reduced motion:** smooth scrolling and transitions turn off when `prefers-reduced-motion` is set
-- **Image fallback:** if an image fails to load, a neutral placeholder is shown instead of a broken icon
+The project demonstrates frontend development skills through reusable components, typed mock data, interactive UI, responsive layouts, accessibility considerations, and a predefined conversational assistant experience.
 
-## Technology stack
+## Visual Direction
 
-- [Next.js 16](https://nextjs.org/) (App Router, static prerendering)
-- React 19 and TypeScript
-- Tailwind CSS v4
-- [Lucide React](https://lucide.dev/) icons
-- `class-variance-authority`, `clsx`, and `tailwind-merge` for button variants and class merging
+**NOVAFIT — CINEMATIC TECH**
 
-> The original brief asked for Vite. I built it on the Next.js setup that came with the workspace. Every route is statically prerendered, so the output works like a static site.
+- Obsidian: `#0A0A0A`
+- Graphite: `#171717`
+- Electric Lime: `#B7F34A`
+- Ice White: `#F2F4EF`
 
-## Getting started
+The interface combines large condensed headlines, technical labels, asymmetric layouts, subtle transitions, structured content, and carefully framed photography.
 
-Requirements: Node.js 20+ and pnpm. npm or yarn should also work.
+The redesign emphasizes a progressive narrative across the homepage rather than a conventional fitness business template.
+
+## Main Features
+
+### 1. Cinematic Homepage
+
+- Responsive navigation with an accessible mobile menu.
+- Athletic hero composition with editorial typography.
+- Performance-focused studio introduction.
+- Responsive layouts and image treatments.
+- Subtle CSS transitions and reduced-motion support.
+
+### 2. Training Programs
+
+Four illustrative training categories:
+
+- Strength Training
+- Functional Training
+- HIIT
+- Personal Training
+
+Features:
+- Interactive category filters.
+- Dynamic program card layouts.
+- Program selection connected to the trial request form.
+- Accessible filter states and result announcements.
+
+### 3. Coaches & Weekly Schedule
+
+- Four fictional trainer profiles.
+- Weekly schedule with seven selectable days.
+- Keyboard-operable day selector.
+- Class information including time, coach, duration, program, and intensity.
+- Dedicated empty state for days without scheduled classes.
+
+### 4. Membership Plans
+
+Three illustrative membership tiers:
+
+- Starter
+- Performance
+- Unlimited
+
+Features:
+- Responsive membership cards.
+- Clear plan comparisons.
+- Recommended plan styling.
+- Plan selection connected to the trial request form.
+
+All prices and benefits are fictional demonstration data. No checkout or payment processing is implemented.
+
+### 5. NovaFit Intelligence — Assistant Concept
+
+A predefined conversational guide designed to help visitors explore training goals and identify a suitable program and membership option.
+
+Features:
+- Goal-based conversation flow.
+- Strength and muscle, conditioning, and personal coaching paths.
+- Contextual program and membership recommendations.
+- Integration with the existing trial selection context.
+- Recommendation actions that prefill the trial request form.
+- Reset and conversation controls.
+- Responsive floating assistant interface.
+
+> **Important:** NovaFit Intelligence is a concept demonstration, not a live AI integration. Its conversation is powered by a predefined decision flow and local application state. It does not use an LLM, external AI API, backend service, or remote knowledge base.
+
+### 6. Trial Request Form
+
+- Accessible form labels and validation.
+- Conditional phone validation.
+- Error summary and screen-reader announcements.
+- Selected program and membership prefill.
+- Demo acknowledgment.
+- Simulated submission and confirmation state.
+
+The form does not send, store, or process submissions on a server.
+
+### 7. Additional Features
+
+- FAQ accordion.
+- Privacy and Terms demonstration pages.
+- Accessible navigation and interaction patterns.
+- Image loading fallback.
+- Reduced-motion support.
+- Responsive layouts designed for mobile and desktop.
+
+---
+
+## Technology Stack
+
+- **Next.js 16** — App Router
+- **React 19**
+- **TypeScript**
+- **Tailwind CSS v4**
+- **Lucide React**
+- **class-variance-authority**
+- **clsx**
+- **tailwind-merge**
+
+The application uses reusable React components, typed data models, and client-side state where interactive behavior is required.
+
+No external database, authentication system, payment gateway, or production backend is included.
+
+## Project Structure
+
+```text
+app/
+  layout.tsx
+  page.tsx
+  globals.css
+  privacy/
+    page.tsx
+  terms/
+    page.tsx
+
+components/
+  sections/
+    hero.tsx
+    studio-intro.tsx
+    programs-section.tsx
+    trainers-section.tsx
+    schedule-section.tsx
+    membership-section.tsx
+    trial-section.tsx
+    faq-section.tsx
+    final-cta.tsx
+
+  assistant-widget.tsx
+  trial-request-form.tsx
+  trial-selection-context.tsx
+  program-card.tsx
+  program-filters.tsx
+  trainer-card.tsx
+  schedule-selector.tsx
+  class-list.tsx
+  membership-card.tsx
+  faq-accordion.tsx
+  navbar.tsx
+  footer.tsx
+
+data/
+  programs.ts
+  trainers.ts
+  schedule.ts
+  memberships.ts
+  faq.ts
+  assistant-flow.ts
+
+lib/
+types/
+public/
+  images/
+```
+
+The structure above highlights the main application areas. Some additional shared UI components and utilities are omitted for brevity.
+
+### Data Organization
+
+Illustrative content is separated from presentation components.
+
+The `data/` directory contains the program, trainer, schedule, membership, FAQ, and assistant conversation definitions.
+
+This makes it possible to update demonstration content without rewriting the main UI components.
+
+---
+
+## Getting Started
+
+### Requirements
+
+- Node.js 20+
+- pnpm
+
+### Installation
 
 ```bash
 pnpm install
-pnpm dev        # http://localhost:3000
 ```
 
-## Build
+### Development
 
 ```bash
-pnpm build      # type-checks and builds a production bundle
-pnpm start      # serves the production build
+pnpm dev
 ```
 
-## Project structure
+Open [http://localhost:3000](http://localhost:3000).
 
-```
-app/
-  layout.tsx            Root layout, fonts, metadata
-  page.tsx              Home page (assembles sections)
-  privacy/page.tsx      Illustrative privacy policy
-  terms/page.tsx        Illustrative terms of use
-  globals.css           Design tokens and base styles
-components/
-  sections/             Page sections (hero, programs, trainers, schedule, ...)
-  navbar.tsx  footer.tsx  button.tsx  section-heading.tsx
-  program-card.tsx  program-filters.tsx  trainer-card.tsx
-  schedule-selector.tsx  class-list.tsx  membership-card.tsx
-  trial-request-form.tsx  faq-accordion.tsx  safe-image.tsx
-  trial-selection-context.tsx   Shares the chosen plan/program with the form
-data/                   Mock content (programs, trainers, schedule, memberships, FAQ)
-types/index.ts          Shared TypeScript models
-public/images/          Photography assets
+### Production Build
+
+```bash
+pnpm build
 ```
 
-To change any content, edit the files in `data/`. You don't need to touch the components.
+### Run Production Build
 
-## Screenshots
+```bash
+pnpm start
+```
 
-_Add screenshots here._
-
-| Desktop | Mobile |
-| ------- | ------ |
-| `docs/screenshot-desktop.png` | `docs/screenshot-mobile.png` |
+---
 
 ## Deployment
 
-The project deploys to any host that supports Next.js. Some options:
+The project is deployed on Vercel:
 
-- **Vercel:** import the GitHub repository at vercel.com/new. It detects Next.js and needs no configuration or environment variables.
-- **Other Node hosts:** run `pnpm build` and then `pnpm start`.
+**https://novafit-fitness-studio.vercel.app**
 
-Every route is prerendered, so opening `/privacy` or `/terms` directly works without extra rewrite rules.
+The repository can be imported into Vercel for deployment using its Next.js integration.
 
-_No live deployment URL has been published yet._
+---
 
-## Privacy and third parties
+## Accessibility & Responsive Design
 
-- No analytics, advertising pixels, tracking scripts, or cookies
-- No `localStorage` or `sessionStorage`
-- Form input stays in React memory and is lost when you reload the page
-- Fonts are self-hosted at build time through `next/font`
+Accessibility and responsive behavior are considered throughout the interface.
 
-## Image assets
+Implemented considerations include:
 
-The images in `public/images/` were AI-generated for this project. They show no real people or trainers. Before you reuse them commercially, check the image generator's terms yourself. I haven't independently confirmed the licensing.
+- Semantic HTML structure.
+- Accessible navigation controls.
+- Keyboard-operable schedule selector.
+- Accessible filter and accordion states.
+- Form labels, validation feedback, and error announcements.
+- Visible focus states.
+- Minimum touch target sizing for important controls.
+- Reduced-motion preferences.
+- Responsive layouts for narrow mobile screens and larger displays.
 
-## Before real-world use
+These implementations are not a substitute for a complete manual accessibility audit with assistive technologies.
 
-Before NovaFit could become a real business site, you would need to:
+## Privacy & Third-Party Services
 
-- Replace every fictional name, price, schedule, and policy
-- Have a qualified professional review the privacy policy and terms, adding the real legal entity, contact details, and jurisdiction
-- Connect the form to a backend with consent handling, and update the privacy policy to match
-- Run a manual accessibility audit with assistive technology
+The demonstration does not include:
+
+- Analytics or advertising pixels.
+- User authentication.
+- A remote database.
+- Backend form processing.
+- Payment processing.
+- External AI API integration.
+- Persistent conversation or form submission storage.
+
+Form and assistant interactions use client-side application state.
+
+Fonts are self-hosted through `next/font`.
+
+## Before Real-World Use
+
+Before adapting NovaFit for an actual fitness business, the following would be necessary:
+
+- Replace all fictional business information, trainers, programs, prices, and schedules.
+- Obtain appropriate rights and permissions for all production imagery.
+- Connect the trial request form to a secure backend.
+- Implement appropriate consent and data handling.
+- Review and adapt privacy and terms documents for the actual business and jurisdiction.
+- Implement real booking and payment integrations if required.
+- Replace the predefined assistant flow with a properly designed AI integration if live AI functionality is desired.
+- Perform a complete accessibility, security, and production-readiness review.
+
+## Project Purpose
+
+NovaFit is an independent frontend portfolio project created to demonstrate modern web design and development practices, including:
+
+- Responsive interface development.
+- Component-based architecture.
+- Interactive frontend experiences.
+- Data-driven UI.
+- Accessibility considerations.
+- Conversational UI concepts.
+- Visual storytelling and art direction.
+
+It is a fictional concept project, not commissioned client work.
 
 ## License
 
-This is a portfolio demonstration. Add a license of your choice before publishing.
+This repository is a portfolio demonstration. No open-source license has been granted.
