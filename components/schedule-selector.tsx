@@ -43,10 +43,13 @@ export function ScheduleSelector({ value, onChange, counts, panelId }: ScheduleS
     <div
       role="tablist"
       aria-label="Day of the week"
-      className="grid grid-cols-7 border border-border"
+      className="grid grid-cols-4 overflow-hidden rounded-sm border border-border-strong bg-background sm:grid-cols-7"
     >
       {weekdays.map((day, index) => {
         const isActive = day.value === value
+        const dayIndex = String(index + 1).padStart(2, '0')
+        const count = counts[day.value]
+
         return (
           <button
             key={day.value}
@@ -62,24 +65,39 @@ export function ScheduleSelector({ value, onChange, counts, panelId }: ScheduleS
             onClick={() => onChange(day.value)}
             onKeyDown={(event) => onKeyDown(event, index)}
             className={cn(
-              'flex flex-col items-center gap-1 border-r border-border py-4 transition-colors last:border-r-0 focus-visible:-outline-offset-2',
-              isActive ? 'bg-accent text-accent-foreground' : 'text-muted-foreground hover:bg-surface-raised hover:text-foreground',
+              'flex min-h-16 flex-col items-start justify-between gap-2 border-b border-r border-border px-3 py-3 text-left transition-colors focus-visible:-outline-offset-2 sm:items-center sm:border-b-0 sm:px-2 sm:py-4 sm:text-center sm:last:border-r-0 [&:nth-child(4n)]:border-r-0 sm:[&:nth-child(4n)]:border-r [&:nth-child(n+5)]:border-b-0',
+              isActive
+                ? 'bg-accent text-accent-foreground'
+                : 'bg-surface text-muted-foreground hover:bg-surface-raised hover:text-foreground',
             )}
           >
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] sm:text-sm">
-              <span className="sm:hidden" aria-hidden="true">
-                {day.short.slice(0, 2)}
+            <span className="flex w-full items-center justify-between text-[10px] font-semibold uppercase tracking-[0.14em] sm:justify-center sm:gap-1.5">
+              <span aria-hidden="true" className={cn('tabular-nums', isActive ? 'text-accent-foreground/75' : 'text-accent')}>
+                {dayIndex}
               </span>
-              <span className="hidden sm:inline" aria-hidden="true">
-                {day.short}
-              </span>
-              <span className="sr-only">{day.label}</span>
+              <span
+                aria-hidden="true"
+                className={cn(
+                  'size-1.5 rounded-full sm:hidden',
+                  isActive ? 'bg-accent-foreground' : count > 0 ? 'bg-accent' : 'bg-border-strong',
+                )}
+              />
             </span>
-            <span
-              className={cn('text-xs tabular-nums', isActive ? 'text-accent-foreground/75' : 'text-muted-foreground')}
-            >
-              {counts[day.value]}
-              <span className="sr-only"> classes</span>
+
+            <span className="flex w-full items-baseline justify-between gap-1 sm:flex-col sm:items-center sm:gap-1">
+              <span className="text-xs font-bold uppercase tracking-[0.1em] text-current sm:text-sm">
+                <span aria-hidden="true">{day.short}</span>
+                <span className="sr-only">{day.label}</span>
+              </span>
+              <span
+                className={cn(
+                  'text-xs font-medium tabular-nums',
+                  isActive ? 'text-accent-foreground/80' : 'text-muted-foreground',
+                )}
+              >
+                {count}
+                <span className="sr-only"> {count === 1 ? 'class' : 'classes'}</span>
+              </span>
             </span>
           </button>
         )

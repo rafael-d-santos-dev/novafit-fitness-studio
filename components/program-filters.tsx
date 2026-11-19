@@ -11,7 +11,7 @@ interface ProgramFiltersProps {
 export function ProgramFilters({ value, onChange, controlsId }: ProgramFiltersProps) {
   return (
     <div role="group" aria-label="Filter programs by category" className="flex flex-wrap gap-2">
-      {programFilters.map((filter) => {
+      {programFilters.map((filter, index) => {
         const isActive = filter.value === value
         return (
           <button
@@ -21,13 +21,19 @@ export function ProgramFilters({ value, onChange, controlsId }: ProgramFiltersPr
             aria-controls={controlsId}
             onClick={() => onChange(filter.value)}
             className={cn(
-              'min-h-12 rounded-sm border px-4 text-xs font-semibold uppercase tracking-[0.1em] transition-colors',
+              'inline-flex min-h-12 items-center gap-2 rounded-sm border px-4 text-xs font-semibold uppercase tracking-[0.12em] transition-colors',
               isActive
                 ? 'border-accent bg-accent text-accent-foreground'
-                : 'border-border-strong text-muted-foreground hover:border-foreground hover:text-foreground',
+                : 'border-border-strong bg-surface/60 text-muted-foreground hover:border-foreground hover:text-foreground',
             )}
           >
-            {filter.label}
+            <span
+              aria-hidden="true"
+              className={cn('text-[10px] tabular-nums', isActive ? 'text-accent-foreground/80' : 'text-accent')}
+            >
+              {String(index).padStart(2, '0')}
+            </span>
+            <span>{filter.label}</span>
           </button>
         )
       })}
